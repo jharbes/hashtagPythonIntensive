@@ -19,6 +19,7 @@ Base de Dados: https://drive.google.com/drive/folders/1T7D0BlWkNuy_MDpUHuBG44kT8
 # Passo 1: Importar a base de dados
 
 import pandas as pd
+import plotly as px
 
 tabela=pd.read_csv('C:\\Users\\jharbes\\Documents\\GitHub\\hashtagPython\\aula02-analiseDeDados\\clientes.csv', encoding='latin', sep=';')
 # deletar a coluna inutil (informacao que nao te ajuda, te atrapalha)
@@ -45,6 +46,8 @@ print(tabela.info())
 
 # 3- corrigir informacoes vazias
 
+# print(tabela[tabela['Profissão'].isna()]) # mostra as linhas vazias para analise (caso assim seja desejado)
+
 tabela=tabela.dropna() # exclui as linhas que possuem valores vazios
 
 print(tabela.info()) 
@@ -54,8 +57,14 @@ print(tabela.info())
 
 # Passo 4: Análise Inicial -> Entender a nota dos clientes
 
+print(tabela.describe()) # imprime diversos valores referentes à tabela em questao como max, min, media(mean), etc
 
+# importamos o plotly para criar grafico
+# 1- criamos o grafico
+grafico = px.histogram(tabela, x='Origem', y='Nota (1-100)')
 
+# 2- exibimos o grafico
+grafico.show()
 
 
 # Passo 5: Análise Completa -> Entender como cada característica do cliente impacta na nota
