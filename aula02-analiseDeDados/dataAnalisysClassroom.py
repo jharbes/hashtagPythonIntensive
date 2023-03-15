@@ -22,7 +22,7 @@ import pandas as pd
 
 tabela=pd.read_csv('C:\\Users\\jharbes\\Documents\\GitHub\\hashtagPython\\aula02-analiseDeDados\\clientes.csv', encoding='latin', sep=';')
 # deletar a coluna inutil (informacao que nao te ajuda, te atrapalha)
-tabela=tabela.drop('Unnamed: 8',axis=1) # axis(eixo = 0 se for linha e 1 se for coluna)
+tabela=tabela.drop('Unnamed: 8',axis=1) # axis(eixo = 0 se for linha e 1 se for coluna), pode ser passado uma lista de colunas/linhas para que todas sejam deletadas no mesmo comando, elas devem estar em formato de lista
 
 # Passo 2: Visualizar a base de dados
     # Entender as informações que você tem disponível
