@@ -33,11 +33,20 @@ print(tabela)
 
 
 # Passo 3: Tratamento dos dados
+print(tabela.info()) # imprime as informacoes de cada coluna como numero de valores nao nulos e tipagem de cada uma da colunas
+
     # 1- deletar as colunas inuteis
     # 2- acertar informacoes que estao sendo reconhecidas de forma errada
     # 3- corrigir informacoes vazias
 
+
+
+
 # Passo 4: Análise Inicial -> Entender a nota dos clientes
+
+
+
+
 
 # Passo 5: Análise Completa -> Entender como cada característica do cliente impacta na nota
 
