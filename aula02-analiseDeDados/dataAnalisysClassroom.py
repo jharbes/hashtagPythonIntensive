@@ -35,9 +35,19 @@ print(tabela)
 # Passo 3: Tratamento dos dados
 print(tabela.info()) # imprime as informacoes de cada coluna como numero de valores nao nulos e tipagem de cada uma da colunas
 
-    # 1- deletar as colunas inuteis
-    # 2- acertar informacoes que estao sendo reconhecidas de forma errada
-    # 3- corrigir informacoes vazias
+# 1- deletar as colunas inuteis (feito acima na fase de importacao de base de dados)
+
+# 2- acertar informacoes que estao sendo reconhecidas de forma errada
+
+tabela['Salário Anual (R$)'] = pd.to_numeric(tabela['Salário Anual (R$)'], errors="coerce") # aqui convertemos a tabela de salarios para um numerico pois ele estava como texto (object), o erros = "coerce" força a coercao em numerico, força o texto a se tornar um NaN
+
+print(tabela.info())
+
+# 3- corrigir informacoes vazias
+
+tabela=tabela.dropna() # exclui as linhas que possuem valores vazios
+
+print(tabela.info()) 
 
 
 
