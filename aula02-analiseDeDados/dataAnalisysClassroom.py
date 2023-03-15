@@ -14,3 +14,22 @@ Qual a profissão? Qual a idade? Qual a faixa de renda? E todas as informações
 Base de Dados: https://drive.google.com/drive/folders/1T7D0BlWkNuy_MDpUHuBG44kT80EmRYIs?usp=share_link
 """
 
+# Passo a passo
+
+# Passo 1: Importar a base de dados
+
+import pandas as pd
+
+tabela=pd.read_csv('C:\\Users\\jharbes\\Documents\\GitHub\\hashtagPython\\aula02-analiseDeDados\\clientes.csv', encoding='latin', sep=';')
+print(tabela)
+
+# Passo 2: Visualizar a base de dados
+    # Entender as informações que você tem disponível
+    # Procurar cagadas na base de dados
+
+# Passo 3: Tratamento dos dados
+
+# Passo 4: Análise Inicial -> Entender a nota dos clientes
+
+# Passo 5: Análise Completa -> Entender como cada característica do cliente impacta na nota
+
