@@ -66,7 +66,21 @@ pyautogui.press('tab')
 # pyautogui.click(x=775, y=519)
 pyautogui.press('enter')
 
+time.sleep(5)
+
+## Exportar a base de dados
+
+# pyautogui.click(x=819, y=540, button='right')
+# pyautogui.click(x=1063, y=821)
+pyautogui.press('tab')
+pyautogui.press('tab')
+pyautogui.press('down')
+pyautogui.press('space')
+pyautogui.press('up')                   
+pyautogui.press('enter')
+
 time.sleep(3)
 
-# pyautogui.click(x=775, y=519, button='right')
-pyautogui.press('tab')
+pyautogui.press('enter') # faz o download
+
+print('Fim da execução')
