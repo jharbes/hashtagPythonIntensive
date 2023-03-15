@@ -19,7 +19,7 @@ Base de Dados: https://drive.google.com/drive/folders/1T7D0BlWkNuy_MDpUHuBG44kT8
 # Passo 1: Importar a base de dados
 
 import pandas as pd
-import plotly as px
+import plotly.express as px
 
 tabela=pd.read_csv('C:\\Users\\jharbes\\Documents\\GitHub\\hashtagPython\\aula02-analiseDeDados\\clientes.csv', encoding='latin', sep=';')
 # deletar a coluna inutil (informacao que nao te ajuda, te atrapalha)
@@ -61,10 +61,17 @@ print(tabela.describe()) # imprime diversos valores referentes à tabela em ques
 
 # importamos o plotly para criar grafico
 # 1- criamos o grafico
-grafico = px.histogram(tabela, x='Origem', y='Nota (1-100)')
 
-# 2- exibimos o grafico
-grafico.show()
+print(tabela.columns)
+
+for coluna in tabela.columns:
+    grafico = px.histogram(tabela, x=coluna, y='Nota (1-100)', histfunc='avg', text_auto=True)
+    # 2- exibimos o grafico
+    grafico.show()
+
+
+
+
 
 
 # Passo 5: Análise Completa -> Entender como cada característica do cliente impacta na nota
