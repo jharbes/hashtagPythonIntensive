@@ -65,14 +65,18 @@ print(tabela.describe()) # imprime diversos valores referentes à tabela em ques
 print(tabela.columns)
 
 for coluna in tabela.columns:
-    grafico = px.histogram(tabela, x=coluna, y='Nota (1-100)', histfunc='avg', text_auto=True)
+    grafico = px.histogram(tabela, x=coluna, y='Nota (1-100)', histfunc='avg', text_auto=True) # podemos tambem usar o numero de nbins como argumento na funcao histogram para definir de quantas barras serao feitas os agrupamentos
     # 2- exibimos o grafico
     grafico.show()
 
 
 
-
-
-
 # Passo 5: Análise Completa -> Entender como cada característica do cliente impacta na nota
 
+# Perfil ideal de cliente
+
+# Acima de 15 anos (nao tem muita diferenca nas idades após isso)
+# Faixa salarial nao parece fazer tanta diferenca
+# Áreas de trabalho entretenimento e artista (evitar construcao)
+# Experiencia de trabalho entre 10 e 15 anos de experiencia
+# Com familias de ate no maximo 7 pessoas
