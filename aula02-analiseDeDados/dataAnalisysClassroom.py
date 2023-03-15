@@ -21,13 +21,21 @@ Base de Dados: https://drive.google.com/drive/folders/1T7D0BlWkNuy_MDpUHuBG44kT8
 import pandas as pd
 
 tabela=pd.read_csv('C:\\Users\\jharbes\\Documents\\GitHub\\hashtagPython\\aula02-analiseDeDados\\clientes.csv', encoding='latin', sep=';')
-print(tabela)
+# deletar a coluna inutil (informacao que nao te ajuda, te atrapalha)
+tabela=tabela.drop('Unnamed: 8',axis=1) # axis(eixo = 0 se for linha e 1 se for coluna)
 
 # Passo 2: Visualizar a base de dados
     # Entender as informações que você tem disponível
     # Procurar cagadas na base de dados
 
+print(tabela)
+
+
+
 # Passo 3: Tratamento dos dados
+    # 1- deletar as colunas inuteis
+    # 2- acertar informacoes que estao sendo reconhecidas de forma errada
+    # 3- corrigir informacoes vazias
 
 # Passo 4: Análise Inicial -> Entender a nota dos clientes
 
