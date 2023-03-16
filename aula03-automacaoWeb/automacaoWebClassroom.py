@@ -30,6 +30,7 @@ print(tabela)
 for linha in tabela.index:
     produto=tabela.loc[linha,'Produto']
     print(produto)
+    produto=produto.replace('ó','o').replace('ã','a').replace('á','a').replace('ç','c').replace('é','e').replace('ú','u').lower() # retirando todos os caracteres especiais para que o link nao quebre na consulta
 
     link=f'https://www.melhorcambio.com/{produto}-hoje'
     navegador.get(link)
