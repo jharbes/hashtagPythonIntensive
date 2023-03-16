@@ -1,3 +1,17 @@
+# Recomendacao do selenium utilizar os navegadores Firefox ou Google Chrome
+
+# webdriver
+# firefox -> geckodriver
+# chrome -> chromedriver
+
+from selenium import webdriver
+import time
+
+navegador=webdriver.Chrome()
+
+time.sleep(5)
+# navegador=webdriver.Firefox()
+
 # Passo a passo
 
 # Passo 1: Abrir o navegador
