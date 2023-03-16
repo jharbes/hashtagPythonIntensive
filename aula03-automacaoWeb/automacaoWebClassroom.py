@@ -29,7 +29,20 @@ print(tabela)
 link='https://www.melhorcambio.com/milho-hoje'
 navegador.get(link)
 
-navegador.find_element('xpath','//*[@id="comercial"]') # usar copy xpath do site no elemento desejado (CTRL+SHIFT+C -> CLICAR NO ELEMENTO DESEJADO -> CLICAR SEGUNDO BOTAO MOUSE -> COPY XPATH)
+precoMilho=navegador.find_element('xpath','//*[@id="comercial"]').get_attribute('value') # usar copy xpath do site no elemento desejado (CTRL+SHIFT+C -> CLICAR NO ELEMENTO DESEJADO -> CLICAR SEGUNDO BOTAO MOUSE -> COPY XPATH)
+print(precoMilho)
+
+"""
+Elemento em questão abaixo:
+
+<input type="text" value="85,49" class="text-verde" id="comercial" calc="sim">
+"""
+
+# Opções para serem feitas com os elementos:
+
+# .click() -> clicar
+# .send_keys('texto') -> escrever
+# .get_attribute() - > pegar um valor
 
 # Passo 3: Para cada produto da base de dados
 # Passo 4: Pesquisar o preco do produto
