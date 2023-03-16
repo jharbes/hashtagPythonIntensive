@@ -65,6 +65,8 @@ print(tabela)
 
 # exportar a base para o excel
 
+tabela.to_excel('commodities_atualizado.xlsx', index=False) # usamos o index=False para que ele nao exporte tambem a coluna de indices
+
 
 
 
