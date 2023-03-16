@@ -17,6 +17,7 @@ navegador.get('https://www.google.com/')
 
 time.sleep(1)
 # navegador=webdriver.Firefox()
+# para o firefox usar o geckodriver
 
 
 # Passo 2: Importar a base de dados
