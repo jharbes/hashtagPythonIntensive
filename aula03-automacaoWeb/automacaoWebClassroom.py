@@ -26,11 +26,16 @@ import pandas as pd
 tabela=pd.read_excel('C:\\Users\\jharbes\\Documents\\GitHub\\hashtagPython\\aula03-automacaoWeb\\commodities.xlsx')
 print(tabela)
 
-link='https://www.melhorcambio.com/milho-hoje'
-navegador.get(link)
 
-precoMilho=navegador.find_element('xpath','//*[@id="comercial"]').get_attribute('value') # usar copy xpath do site no elemento desejado (CTRL+SHIFT+C -> CLICAR NO ELEMENTO DESEJADO -> CLICAR SEGUNDO BOTAO MOUSE -> COPY XPATH)
-print(precoMilho)
+for linha in tabela.index:
+    produto=tabela.loc[linha,'Produto']
+    print(produto)
+
+    link=f'https://www.melhorcambio.com/{produto}-hoje'
+    navegador.get(link)
+
+    precoProduto=navegador.find_element('xpath','//*[@id="comercial"]').get_attribute('value') # usar copy xpath do site no elemento desejado (CTRL+SHIFT+C -> CLICAR NO ELEMENTO DESEJADO -> CLICAR SEGUNDO BOTAO MOUSE -> COPY XPATH)
+    print(precoProduto) 
 
 """
 Elemento em questão abaixo:
