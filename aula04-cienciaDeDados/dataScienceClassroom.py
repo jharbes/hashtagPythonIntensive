@@ -47,5 +47,15 @@ None
 """
 
 # Passo 5: Análise Exploratória
+
+# Correlaçao entre as informacoes da base de dados:
+
+print(tabela.corr()) # correlacao representa uma certa proporcionalidade entre o crescimento de dois itens, nesse caso vamos analisar a variacao do preco em relacao as outras colunas da tabela
+
+
+print(tabela.corr()['Preco']) # isolando a tabela preco
+print(tabela.corr()[['Preco']]) # melhorando a formatacao da coluna
+
+
 # Passo 6: Modelagem + Algoritmos (Aqui que entra a Inteligência Artificial, se necessário)
 # Passo 7: Interpretação de Resultados
