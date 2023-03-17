@@ -19,7 +19,7 @@ Projeto Ciência de Dados - Previsão de Preços
 
 import pandas as pd
 
-tabela=pd.read_csv(r'C:\Users\jharbes\Documents\GitHub\hashtagPython\aula04-cienciaDeDados\barcos_ref.csv')
+tabela=pd.read_csv(r'C:\Users\Jorge\Desktop\hashtagPython\aula04-cienciaDeDados\barcos_ref.csv')
 print(tabela)
 
 
@@ -119,4 +119,20 @@ print(r2_score(yTeste,previsaoArvoreDecisao)) # 0.8465406348439206 -> valor alea
 
 # Visualizar as previsoes
 
+# o grafico mostra como a arvore decisao tem melhores resultados do que a regressao linear
+tabelaAuxiliar=pd.DataFrame()
+tabelaAuxiliar['yTeste']=yTeste
+tabelaAuxiliar['ArvoreDecisao']=previsaoArvoreDecisao
+tabelaAuxiliar['RegressaoLinear']=previsaoRegressaoLinear
+
+sns.lineplot(data=tabelaAuxiliar)
+plt.show()
+
+
 # Fazer novas previsoes (usando a IA na prática)
+
+tabelaNova=pd.read_csv(r'C:\Users\Jorge\Desktop\hashtagPython\aula04-cienciaDeDados\novos_barcos.csv')
+print(tabelaNova)
+
+previsao=modeloArvoreDecisao.predict(tabelaNova)
+print(previsao)
