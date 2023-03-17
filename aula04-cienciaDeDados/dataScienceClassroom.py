@@ -113,8 +113,8 @@ from sklearn.metrics import r2_score
 previsaoRegressaoLinear=modeloRegressaoLinear.predict(xTeste)
 previsaoArvoreDecisao=modeloArvoreDecisao.predict(xTeste)
 
-print(r2_score(yTeste,previsaoRegressaoLinear))
-print(r2_score(yTeste,previsaoArvoreDecisao))
+print(r2_score(yTeste,previsaoRegressaoLinear)) # 0.4388968724908827 -> valor aleatorio
+print(r2_score(yTeste,previsaoArvoreDecisao)) # 0.8465406348439206 -> valor aleatorio
 
 
 # Visualizar as previsoes
