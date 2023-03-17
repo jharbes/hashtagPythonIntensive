@@ -62,10 +62,23 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # cria o grafico
-sns.heatmap(correlacao, cmap='Blues') # cria com o seaborn, usando o color map (cmap) de Blues para ficar com tons de azul
+sns.heatmap(correlacao, cmap='Blues', annot=True) # cria com o seaborn, usando o color map (cmap) de Blues para ficar com tons de azul
 
 # exibe o grafico
 plt.show() # exibe com o matplotlib
 
+
 # Passo 6: Modelagem + Algoritmos (Aqui que entra a Inteligência Artificial, se necessário)
+    # dividir a tabela entre  x e y  (sendo normalmente y o objetivo e x o resto da tabela)
+
+y=tabela['Preco'] # dados que queremos prever
+
+# x caracteristicas do barco que iremos usar para prever o preco
+x=tabela.drop('Preco', axis=1) # a tabela x seriam todas as tabelas exceto a tabela preco, sendo assim o comando seria apague 'Preco' que eh uma coluna (axis=1), retorna a tabela sem a coluna 'Preco'
+# axis = 0 -> Linhas, axis=1 -> colunas
+
+# train test split (divisao em treino e teste)
+
+
+
 # Passo 7: Interpretação de Resultados
