@@ -106,3 +106,17 @@ modeloArvoreDecisao.fit(xTreino,yTreino)
 
 
 # Passo 7: Interpretação de Resultados
+
+# Escolher o melhor modelo -> R²
+from sklearn.metrics import r2_score
+
+previsaoRegressaoLinear=modeloRegressaoLinear.predict(xTeste)
+previsaoArvoreDecisao=modeloArvoreDecisao.predict(xTeste)
+
+print(r2_score(yTeste,previsaoRegressaoLinear))
+print(r2_score(yTeste,previsaoArvoreDecisao))
+
+
+# Visualizar as previsoes
+
+# Fazer novas previsoes (usando a IA na prática)
