@@ -85,7 +85,24 @@ from sklearn.model_selection import train_test_split
 xTreino,xTeste,yTreino,yTeste=train_test_split(x,y)
 
 # podemos definir o tamanho da base de teste dentro da funcao caso seja assim desejado:
+
 # xTreino,xTeste,yTreino,yTeste=train_test_split(x,y, teste_size=0.2) # nesse caso seria 20% da base para teste
+
+# xTreino,xTeste,yTreino,yTeste=train_test_split(x,y, teste_size=0.2, random_state=1) # random_state=1 impede que o fator aleatorio seja impedido de rodar mais do que uma vez, manter o resultado inicial
+
+
+# Importar a Inteligencia Artificial
+# RegressaoLinear e ArvoreDeDecisao
+from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestRegressor
+
+# Cria a Inteligencia Artificial
+modeloRegressaoLinear=LinearRegression()
+modeloArvoreDecisao=RandomForestRegressor()
+
+# Treinar a Inteligencia Artificial
+modeloRegressaoLinear.fit(xTreino,yTreino)
+modeloArvoreDecisao.fit(xTreino,yTreino)
 
 
 # Passo 7: Interpretação de Resultados
