@@ -79,6 +79,13 @@ x=tabela.drop('Preco', axis=1) # a tabela x seriam todas as tabelas exceto a tab
 
 # train test split (divisao em treino e teste)
 
+from sklearn.model_selection import train_test_split
+
+# NORMALMENTE a biblioteca divide 70% da base em treino e 30% da base em teste, em geral quanto maior a base de treino e testes melhor sera a precisao e qualidade da IA
+xTreino,xTeste,yTreino,yTeste=train_test_split(x,y)
+
+# podemos definir o tamanho da base de teste dentro da funcao caso seja assim desejado:
+# xTreino,xTeste,yTreino,yTeste=train_test_split(x,y, teste_size=0.2) # nesse caso seria 20% da base para teste
 
 
 # Passo 7: Interpretação de Resultados
