@@ -50,7 +50,7 @@ None
 
 # Correlaçao entre as informacoes da base de dados:
 
-print(tabela.corr()) # correlacao representa uma certa proporcionalidade entre o crescimento de dois itens, nesse caso vamos analisar a variacao do preco em relacao as outras colunas da tabela
+print(tabela.corr()) # correlacao representa uma certa proporcionalidade entre o crescimento de dois itens, nesse caso vamos analisar a variacao do preco em relacao as outras colunas da tabela (valor entre 0 e 1, valores negativos representam crescimento em direcoes opostas entre os valores)
 
 
 print(tabela.corr()['Preco']) # isolando a tabela preco
