@@ -56,6 +56,16 @@ print(tabela.corr()) # correlacao representa uma certa proporcionalidade entre o
 print(tabela.corr()['Preco']) # isolando a tabela preco
 print(tabela.corr()[['Preco']]) # melhorando a formatacao da coluna
 
+correlacao=tabela.corr()[['Preco']]
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# cria o grafico
+sns.heatmap(correlacao, cmap='Blues') # cria com o seaborn, usando o color map (cmap) de Blues para ficar com tons de azul
+
+# exibe o grafico
+plt.show() # exibe com o matplotlib
 
 # Passo 6: Modelagem + Algoritmos (Aqui que entra a Inteligência Artificial, se necessário)
 # Passo 7: Interpretação de Resultados
