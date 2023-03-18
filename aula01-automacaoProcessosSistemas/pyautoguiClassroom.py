@@ -107,4 +107,23 @@ print(f'{precoMedio=}')
 
 
 
+# Passo 5: Enviando email para o chefe
+
+# Entrar no email: https://mail.google.com/mail/u/0/#inbox
+# clicar no botao escrever
+# preencher as informacoes do email
+# enviar
+
+pyautogui.hotkey('ctrl','t') # abrir nova aba do chrome
+pyautogui.write('https://mail.google.com/mail/u/0/#inbox')
+pyautogui.press('enter')
+time.sleep(5)
+
+# clicar no botao escrever
+pyautogui.click(x=135, y=240)
+
+# preencher as informacoes do email
+# destinatario
+
+
 print('Fim da execução')
