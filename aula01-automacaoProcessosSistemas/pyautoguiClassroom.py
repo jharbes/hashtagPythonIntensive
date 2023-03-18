@@ -83,4 +83,14 @@ time.sleep(3)
 
 pyautogui.press('enter') # faz o download
 
-print('Fim da execução')
+# Passo 4: Calcular os indicadores
+
+import pandas
+
+# raw string
+tabela=pandas.read_csv(r'C:\Users\Jorge\Desktop\hashtagPython\aula01-automacaoProcessosSistemas\Compras.csv')
+print(tabela)
+
+
+
+
