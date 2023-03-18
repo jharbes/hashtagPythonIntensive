@@ -55,7 +55,23 @@ pyperclip.copy('Relatório de Vendas')
 pyautogui.hotkey('ctrl', 'v')
 
 pyautogui.press('tab') # passa para o corpo do email (proimo campo do formulario)
-pyautogui.write('Corpo do email')
+
+texto=f'''
+Prezados,
+Segue o relatório de compras
+
+Total Gasto: {totalGasto}
+Quantidade de Produtos: {quantidade}
+Preço Médio: {precoMedio}
+
+Para qualquer dúvida, estou a disposição.
+
+Atenciosamente,
+
+Jorge Harbes
+'''
+pyperclip.copy(texto)
+pyautogui.hotkey('ctrl','v')
 
 
 # Enviar
