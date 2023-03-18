@@ -16,6 +16,6 @@ quantidade=tabela['Quantidade'].sum()
 # preco medio 
 precoMedio=totalGasto/quantidade
 
-print(totalGasto)
-print(quantidade)
-print(precoMedio)
+print(f'{totalGasto=}')
+print(f'{quantidade=}')
+print(f'{precoMedio=}')
