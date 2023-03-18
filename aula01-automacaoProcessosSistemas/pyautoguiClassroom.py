@@ -141,9 +141,9 @@ texto=f'''
 Prezados,
 Segue o relatório de compras
 
-Total Gasto: {totalGasto}
-Quantidade de Produtos: {quantidade}
-Preço Médio: {precoMedio}
+Total Gasto: R${totalGasto:,.2f}
+Quantidade de Produtos: {quantidade:,}
+Preço Médio: R${precoMedio:,.2f}
 
 Para qualquer dúvida, estou a disposição.
 
