@@ -19,7 +19,7 @@ pyautogui.PAUSE # pause que funcionará entre TODOS os comandos do pyautogui val
 # Passo a passo
 
 # setar Pausa:
-pyautogui.PAUSE = 1
+pyautogui.PAUSE = 2
 
 # Passo 1: Entrar no sistema da empresa (no link)
 
@@ -73,7 +73,7 @@ time.sleep(5)
 # pyautogui.click(x=819, y=540, button='right')
 # pyautogui.click(x=1063, y=821)
 pyautogui.press('tab')
-pyautogui.press('tab')
+# pyautogui.press('tab')
 pyautogui.press('down')
 pyautogui.press('space')
 pyautogui.press('up')                   
