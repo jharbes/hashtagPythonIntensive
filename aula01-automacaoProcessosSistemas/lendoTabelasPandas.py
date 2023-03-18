@@ -43,3 +43,16 @@ pyautogui.click(x=135, y=240)
 
 # preencher as informacoes do email
 # destinatario
+pyautogui.write('jharbes@hotmail.com')
+pyautogui.press('tab') # escolher o destinatario
+
+pyautogui.press('tab') # passa para o campo assunto(proximo campo do formulario)
+
+pyautogui.write('Relatório de Vendas')
+
+pyautogui.press('tab') # passa para o corpo do email (proimo campo do formulario)
+pyautogui.write('Corpo do email')
+
+
+# Enviar
+pyautogui.hotkey('ctrl','enter')
