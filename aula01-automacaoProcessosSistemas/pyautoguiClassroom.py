@@ -129,7 +129,10 @@ pyautogui.press('tab') # escolher o destinatario
 
 pyautogui.press('tab') # passa para o campo assunto(proximo campo do formulario)
 
-pyautogui.write('Relatório de Vendas')
+import pyperclip
+# para usarmos acentos ou caracteres especiais no pyautogui tera que ser feito por meio do pyperclip, faremos a copia do que for escrito com pyperclip.copy e depois copiaremos no formulario, local pertinente com pyautogui.hotkey('ctrl','v') conforme abaixo
+pyperclip.copy('Relatório de Vendas')
+pyautogui.hotkey('ctrl', 'v')
 
 pyautogui.press('tab') # passa para o corpo do email (proimo campo do formulario)
 pyautogui.write('Corpo do email')
