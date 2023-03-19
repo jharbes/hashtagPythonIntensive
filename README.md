@@ -1,8 +1,8 @@
 <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" align="right" width="110">
 
-# hashtagPython
+# hashtagPythonIntensive
 
-<h3>hashtagPython</h3>
+<h3>hashtagPythonIntensive</h3>
 <br>
 
 <p>Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Foi lançada por Guido van Rossum em 1991.</p>
