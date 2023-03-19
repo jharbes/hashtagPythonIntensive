@@ -18,8 +18,7 @@ with sync_playwright() as p:
 
     # pagina.locator('xpath=/html/body/div[1]/div[1]/header/div/div[2]/div/div/div[1]/div/div/form/label/input[1]').click() # clica no elemento com base em seu xpath
 
-    pagina.fill('xpath=/html/body/div[1]/div[1]/header/div/div[2]/div/div/div[1]/div/div/form/label/input[1]','Jorge Harbes')
-
+    pagina.fill('xpath=/html/body/div[1]/div[1]/header/div/div[2]/div/div/div[1]/div/div/form/label/input[1]','Python Playwright')
 
     time.sleep(3)
 
